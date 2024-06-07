@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UV SKINS | Signup</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <div class="login-box">
+      <h2>Signup</h2>
+      {% if error_message %}
+      <div class="error">{{ error_message }}</div>
+      {% endif %} {% if success_message %}
+      <div class="success">{{ success_message }}</div>
+      {% endif %}
+      <form action="{% url 'signup' %}" method="post">
+        {% csrf_token %}
+        <div class="user-box">
+          <input type="text" name="name" required />
+          <label>Nome</label>
+        </div>
+        <div class="user-box">
+          <input type="email" name="email" required />
+          <label>Email</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="phone_number" required />
+          <label>Telefone</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="password" required />
+          <label>Senha</label>
+        </div>
+        <button type="submit">Registrar</button>
+      </form>
+      <div class="footer">
+        <p>Já tem uma conta? <a href="{% url 'login' %}">Entrar</a></p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - UV SKINS</title>
+    <link rel="stylesheet" href="{% static 'contato.css' %}">
+    
+</head>
+<body>
+    <nav>
+        <div class="logo" style="display: flex;align-items: center;">
+            <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">UV SKINS</span>
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'home'%}">Home</a></li>
+            <li><a href="{%url 'skins_list'%}">Produtos</a></li>
+            <li><a href="{%url 'contato'%}">Contate-nos</a></li>
+            <li><a href="{% url 'login' %}"><button class="login-button">Login</button></a></li>
+        </ul>
+    </nav>
+
+
+    <div class="contact-container">
+        <h1 class="contact-header">ENCONTROU ALGUM PROBLEMA? FALE CONOSCO</h1>
+        <div class="contact-info">
+            <p>Email: contato@uvskins.com</p>
+            <p>Telefone: (24) 1234-5678</p>
+        </div>
+    </div>
+</body>
+</html>

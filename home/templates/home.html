@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UV SKINS</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+  <body>
+    <nav>
+      <div class="logo" style="display: flex;align-items: center;">
+          <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">UV SKINS</span>
+      </div>
+      <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
+      <ul class="nav-links">
+          <li><a href="{% url 'home'%}">Home</a></li>
+          <li><a href="{% url 'skins_list'%}">Produtos</a></li>
+          <li><a href="{% url 'contato'%}">Contate-nos</a></li>
+          <li><a href="{% url 'login' %}"><button class="login-button">Login</button></a></li>
+      </ul>
+  </nav>
+  <style>
+    body {
+        font-family: Roboto, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        padding: 100px;
+        background: #4B0082;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+    h1 {
+        font-size: 2.5em;
+        color: #0D6EFD;
+        text-align: center;
+    }
+    p {
+        line-height: 1.6;
+        margin: 15px 0;
+    }
+    .highlight {
+        font-weight: bold;
+        color: #0D6EFD;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Bem-vindo à UV SKINS!</h1>
+    <p>
+        Estamos muito felizes em tê-lo aqui na UV SKINS, o destino final para todos os amantes de Counter-Strike que procuram as melhores skins para suas armas favoritas. Nossa missão é proporcionar a melhor experiência de compra online, oferecendo uma ampla variedade de skins exclusivas, de alta qualidade, que vão transformar suas partidas e elevar seu estilo de jogo a um novo patamar.
+    </p>
+    <p>
+        Ao navegar pelo nosso site, você encontrará uma seleção incrível de skins, meticulosamente escolhidas para garantir que você encontre exatamente o que está procurando. Seja você um veterano de CS:GO ou um novato ansioso para aprimorar seu arsenal, temos algo especial para cada um de vocês. Nossa coleção abrange desde as skins mais populares e cobiçadas até aquelas raridades que são verdadeiros troféus para qualquer jogador.
+    </p>
+    <p>
+        Aqui na UV SKINS, entendemos que cada skin é mais do que apenas um visual; é uma extensão da sua identidade no campo de batalha. É por isso que nos dedicamos a fornecer descrições detalhadas, imagens de alta resolução e, sempre que possível, a história por trás de cada skin. Queremos que você saiba exatamente o que está adquirindo e sinta a emoção de adicionar uma nova peça à sua coleção.
+    </p>
+    <p>
+        Além de nossa fantástica seleção de skins, estamos comprometidos em oferecer um atendimento ao cliente de excelência. Nossa equipe está sempre pronta para ajudar, seja para esclarecer dúvidas, resolver problemas ou fornecer recomendações personalizadas. Valorizamos cada cliente e nos esforçamos para tornar sua experiência de compra a mais agradável e segura possível.
+    </p>
+    <p>
+        Não se esqueça de conferir nossas promoções e ofertas especiais! Regularmente, temos eventos e descontos que tornam ainda mais atraente a aquisição de novas skins. E para aqueles que desejam ficar por dentro de todas as novidades, lançamentos e promoções, recomendamos que se inscrevam em nossa newsletter e nos sigam nas redes sociais.
+    </p>
+    <p>
+        <span class="highlight">Então, o que está esperando?</span> Comece a explorar nosso site agora mesmo e descubra a skin perfeita para você. Transforme suas armas, impressione seus amigos e adversários, e jogue com mais estilo e confiança. Na UV SKINS, acreditamos que cada detalhe importa, e estamos aqui para garantir que você tenha a melhor experiência possível.
+    </p>
+    <p>
+        Bem-vindo à UV SKINS - onde suas armas ganham vida!
+    </p>
+</div>
+  </body>
+</html>

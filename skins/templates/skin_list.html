@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UV SKINS</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}"/>
+  </head>
+  <body>
+    <nav>
+      <div class="logo" style="display: flex;align-items: center;">
+          <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">UV SKINS</span>
+      </div>
+      <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
+      <ul class="nav-links">
+          <li><a href="{% url 'home'%}">Home</a></li>
+          <li><a href="{%url 'skins_list'%}">Produtos</a></li>
+          <li><a href="{% url 'contato'%}">Contate-nos</a></li>
+          {% if user.is_authenticated %}
+          <li>Bem-vindo, {{ user.name }}!</li>
+          {% else %}
+         <li><a href="{% url 'login' %}"><button class="login-button">Login</button></a></li>
+          {% endif %}
+      </ul>
+  </nav>
+    
+    
+    <div class='box'>
+      {% for skin in skins %}
+      <div class='box-skin'>
+      
+        <img src="{{ skin.url_image }}">
+        <p>{{ skin.name }} - R${{ skin.price }}</p>
+      
+      </div>
+    {% endfor %}
+    </div>
+  </body>
+</html>
